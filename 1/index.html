@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
         <title>Samuel  Akigbogun</title>
-        <link rel="icon" href="Images/fav-icon-dark.png" type="image/x-icon">
+        <link rel="icon" href="../Images/fav-icon-dark.png" type="image/x-icon">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous|Sacramento|Manrope">
         
         <style>
@@ -68,7 +68,7 @@
                     align-items: center;
                     width: 24px;
                     height: 24px;
-                    background-image: url(Images/hamburger.png);
+                    background-image: url(../Images/hamburger.png);
                     border: none;
                     outline: none;                    
                 }
@@ -79,7 +79,7 @@
                     align-items: center;
                     width: 24px;
                     height: 24px;
-                    background-image: url(../code/Images/day.png);
+                    background-image: url(../Images/day.png);
                     background-color: #FFFFFF;
                     border: none;
                     outline: none;  
@@ -119,51 +119,96 @@
                     width: 100vw;
                     height: fit-content;
                     z-index: 2;
-
+                    position: relative;
+                    top: 72px;
                 }
 
-                #hero_section{
-                    width: 100vw;
-                    height: 180vh;
-                    max-height: 1680px;
-                    min-height: 1200px;
-                    text-align: center;
+                .section1{
                     display: flex;
                     flex-direction: column;
-                    justify-content: flex-end;
-                    align-items: center;
-                    padding-bottom: 104px;
+                    justify-content: center;
+                    align-items: flex-start;
+                    width: 100vw;
+                    height: calc(100vh - 72px);
+                    max-height: 858px;
+                    text-align: left;
+                    padding: 104px 10vw;
                     color: #222222;
-                    /*background: linear-gradient(
-                        to right,
-                        white 0%,
-                        white 40%,
-                        #D1E3E5 40%,
-                        #D1E3E5 90%, 
-                        white 90%, 
-                        white 100%)
-                    ;*/
+                    position: relative;
                 }
 
-                .image_banner{
-                    width: 60vw;
-                    height: 50vh;
-                    max-height: 480px;
-                    min-height: 360px;
-                    background-color: #222222;
-                    margin-top: 16px;
+                .section1_image_background{
+                    width: 50%;
+                    height: 75%;
+                    max-height: 720px;
+                    position: absolute;
+                    right: 10%;
+                    bottom: 12.5%;
+                    background-color: #D1E3E5;
                 }
 
-                .text_banner{
-                    width: 60vw;
-                    height: 40vh;
-                    max-height: 360px;
-                    min-height: 280px;
-                    background-color: #222222;
+                .section1_banner{
                     display: flex;
                     justify-content: space-between;
-                    margin-top: 64px;
+                    align-items: center;
+                    gap: 16px;
+                    width: 65%;
+                    max-width: 600px;
+                    height: fit-content;
+                    padding: 24px;
+                    position: absolute;
+                    bottom: -50px;
+                    left: 0%;
+                    background-color: #DED7BD;
+                    color: #222222;
+                    z-index: 2;
                 }
+
+                .section1_banner_card{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 16px;
+                    height: fit-content;
+                    width: auto;
+                    padding: 16px;
+                    background-color: #F2EBDB;
+                }
+
+                .section1_banner_card p{
+                    font-family: "Manrope",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 12px;
+                    font-weight: 200;
+                    line-height: 2;
+                }
+ 
+
+                .section1_banner_card_title{
+                    display: flex;
+                    justify-content: start;
+                    gap: 16px;
+                    height: fit-content;
+                }
+
+                .title1{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: start;
+                    width: 65%;
+                    max-width: 600px;
+                    height: fit-content;
+                    z-index: 2;
+                    gap: 32px;
+                }
+
+                .title1 p{
+                    width: 50vw;
+                    max-width: 500px;
+                }
+
+
+                
 
                 .title1, .title2, .title3{
                     display: flex;
@@ -171,24 +216,17 @@
                     justify-content: space-between;
                 }
 
-                .title1{
-                    align-items: center;
-                    text-align: center;
-                    gap: 24px;
-                    width: 80vw;
-                    height: fit-content;
-                }
-
-                .title1 p{
-                    padding: 0% 17.5vw;
-                }
 
                 .title2{
                     align-items: start;
                     text-align: left;
                     gap: 16px;
-                    width: 35vw;
+                    width: fit-content;
                     height: fit-content;
+                }
+
+                .title2 h2{
+                    width: max-content;
                 }
 
                 .title3{
@@ -222,6 +260,20 @@
                     background-color: #222222;
                 }
 
+                .section2{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 100vw;
+                    height: fit-content;
+                    max-height: 858px;
+                    text-align: left;
+                    padding: 104px 10vw;
+                    color: #FFFFFF;
+                    gap: 104px;
+                    background-color: #222222;
+                    line-height: 2;
+                }
                 
 
                 .big_card_section{
@@ -263,37 +315,6 @@
                     height: fit-content;
                 }
 
-                #big_card_image1, #big_card_image2, #big_card_image3, #big_card_image4, #big_card_image5{
-                    width: 100%;
-                    height: 80vh;
-                    max-height: 480px;
-                    background-color: #222222;
-                }
-
-                /*#big_card_image1{
-                    
-                }
-                
-                #big_card_image2{
-                    
-                }
-
-                #big_card_image3{
-                    
-                }
-
-                #big_card_image4{
-                    
-                }
-
-                #big_card_image5{
-                    
-                }
-
-                #big_card_image6{
-                    
-                }*/
-
                 .big_card_text{
                     display: flex;
                     flex-direction: column;
@@ -312,7 +333,7 @@
 
 
 
-                h1, h2, h4{
+                h1, h2, h3, h4, h5{
                     font-family: "Righteous", 'Arial Narrow', Arial, sans-serif;
                 }
 
@@ -325,12 +346,24 @@
                 h2{
                     font-size: 48px;
                     font-weight: 350;
-                    line-height: 1;
+                    line-height: 1.5;
                 }
 
+                h3{
+                    font-size: 32px;
+                    font-weight: 200;
+                    line-height: 2;
+                }
+                
                 h4{
                     font-size: 24px;
                     font-weight: 350;
+                    line-height: 1.5;
+                }
+
+                h5{
+                    font-size: 16px;
+                    font-weight: 300;
                     line-height: 1.5;
                 }
 
@@ -346,9 +379,11 @@
                     flex-direction: column;
                     height: 50vh;
                     width: 100vw;
-                    background-color: #222222;
+                    color: #222222;
+                    background-color: #FFFFFF;
                     padding: 10%;
-
+                    position: relative;
+                    top: 72px;
                 }
        
 
@@ -397,7 +432,7 @@
                     display: flex;
                     width: 24px;
                     height: 24px;
-                    background-image: url(../code/Images/hamburger.png);
+                    background-image: url(../Images/hamburger.png);
                 }
 
                 #menu_container{
@@ -430,31 +465,13 @@
                     padding: 0%;
                 }
 
-                #hero_section{
+                .section1{
                     padding: 0 5% 56px 5%;
                 }
 
 
                 .title1 p{
                     padding: 0%;
-                }
-
-                .image_banner{
-                    width: 100vw;
-                    height: 50vh;
-                    max-height: 480px;
-                    min-height: 360px;
-                    background-color: #222222;
-                    margin-top: 16px;
-                    padding: 0% 5%;
-                }
-
-                .text_banner{
-                    width: 100vw;
-                    height: 40vh;
-                    max-height: 360px;
-                    min-height: 280px;
-                    padding: 0% 5%;
                 }
 
                 .title2{
@@ -537,6 +554,11 @@
                     font-weight: 300;
                 }
 
+                h4{
+                    font-size: 24px;
+                    font-weight: 300;
+                }
+
                 p, a{
                     font-size: 14px;
                     font-weight: 300;
@@ -597,88 +619,47 @@
         </header>
 
         <section class="page_content">
-            <section id="hero_section">
-                <section class="title1">
-                    <h1>Sam, Creative Copywriter</h1>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated<a>See my works<a></p>
+            <section class="section1">
+
+                <section class="section1_image_background"></section>
+                
+                <section class="section1_banner">
+                    <section class="section1_banner_card">
+                        <section class="section1_banner_card_title">
+                            <h5>Heading Here</h5>
+                        </section>
+                        <p>This is the detail</p>
+                    </section>
+
+                    <section class="section1_banner_card">
+                        <section class="section1_banner_card_title">
+                            <h5>Heading Here</h5>
+                        </section>
+                        <p>This is the detail</p>
+                    </section>
+
+                    <section class="section1_banner_card">
+                        <section class="section1_banner_card_title">
+                            <h5>Heading Here</h5>
+                        </section>
+                        <p>This is the detail</p>
+                    </section>
                 </section>
-                <section class="image_banner"></section>
-                <section class="text_banner"></section>
+                
+                <section class="title1">
+                    <h1>This is where the title for the case</h1>
+                    <p>This is where the paragraph text for the whole section goaes but nothing mega.  the whole section goaes but</p>
+                </section>
             </section>
 
-            <section class="big_card_section">
+            <section class="section2">
                 <section class="title2">
-                    <h2>My Works</h2>
-                    <p>Short description of what this section contains goes, and why you should read</p>
+                    <h2>Project Overview</h2>
+                    <p>This is the paragraph tex</p>
                 </section>
 
-                <section class="big_card_container">
-                    <section class="big_card">
-                        <section id="big_card_image1"></section>
-                        
-                        <section class="big_card_text">
-                            <section class="title3">
-                                <h4>This is where the description of the product goes</h4>
-                                <section class="tags"><p>Item 1</p> <p>Item 2</p> <p>Item 3</p></section>
-                            </section>
+                <h3>This is the paragraph text that follows the dfjbjh jdf j bjdfh vfgThis</h3>
 
-                            <p class="big_card_description">Short description of what this section contai description of whaand why you should read</p>
-                        </section>
-                    </section>
-
-                    <section class="big_card">
-                        <section id="big_card_image2"></section>
-                        
-                        <section class="big_card_text">
-                            <section class="title3">
-                                <h4>This is where the description of the product goes</h4>
-                                <section class="tags"><p>Item 1</p> <p>Item 2</p> <p>Item 3</p></section>
-                            </section>
-
-                            <p class="big_card_description">Short description of what this section contai description of whaand why you should read</p>
-                        </section>
-                    </section>
-
-                    <section class="big_card">
-                        <section id="big_card_image3"></section>
-                        
-                        <section class="big_card_text">
-                            <section class="title3">
-                                <h4>This is where the description of the product goes</h4>
-                                <section class="tags"><p>Item 1</p> <p>Item 2</p> <p>Item 3</p></section>
-                            </section>
-
-                            <p class="big_card_description">Short description of what this section contai description of whaand why you should read</p>
-                        </section>
-                    </section>
-
-                    <section class="big_card">
-                        <section id="big_card_image4"></section>
-                        
-                        <section class="big_card_text">
-                            <section class="title3">
-                                <h4>This is where the description of the product goes</h4>
-                                <section class="tags"><p>Item 1</p> <p>Item 2</p> <p>Item 3</p></section>
-                            </section>
-
-                            <p class="big_card_description">Short description of what this section contai description of whaand why you should read</p>
-                        </section>
-                    </section>
-
-                    <section class="big_card">
-                        <section id="big_card_image5"></section>
-                        
-                        <section class="big_card_text">
-                            <section class="title3">
-                                <h4>This is where the description of the product goes</h4>
-                                <section class="tags"><p>Item 1</p> <p>Item 2</p> <p>Item 3</p></section>
-                            </section>
-
-                            <p class="big_card_description">Short description of what this section contai description of whaand why you should read</p>
-                        </section>
-                    </section>
-
-                </section>
             </section>
         </section>
 
