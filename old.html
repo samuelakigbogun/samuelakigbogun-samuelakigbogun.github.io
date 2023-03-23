@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8">
+        <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
+        <title>Samuel  Akigbogun</title>
+        <link rel="icon" href="Images/fav-icon-dark.png" type="image/x-icon">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Righteous|Sacramento|Manrope">
+        
+        <style>
+
+                *{
+                    box-sizing: border-box;
+                    margin: 0%;
+                    padding: 0%;
+                }
+
+                body{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    gap: 0;
+                    overflow-x: hidden;
+                    background-color: #F6FAFF;
+                }
+
+                header, body{
+                    height: fit-content;
+                    width: fit-content;
+                }
+
+                nav{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 100vw;
+                    height: fit-content;
+                    color: #222222;
+                    padding: 0 10%;
+                    position: fixed;
+                    z-index: 5;
+                    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.2);
+                    background-color: #FFFFFF;
+
+                }
+
+                #logo_container{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: fit-content;
+                    height: 72px;
+                }
+
+                #logo_container a{
+                    font-family: "Righteous", 'Arial Narrow', Arial, sans-serif;
+                    font-size: 20px;
+                    font-weight: 250;
+                }
+
+                nav a{
+                    display: block;
+                } 
+
+                #logo_container button{
+                    display: none;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 24px;
+                    height: 24px;
+                    background-image: url(Images/hamburger.png);
+                    border: none;
+                    outline: none;                    
+                }
+
+                .nav_items button{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: 24px;
+                    height: 24px;
+                    background-image: url(../code/Images/day.png);
+                    background-color: #FFFFFF;
+                    border: none;
+                    outline: none;  
+                }
+
+                .menu_container, .nav_items{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                }
+
+                .nav_items{
+                    gap: 32px;
+                }
+
+                .social_links{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: fit-content;
+                    gap: 16px;
+                    padding: 16px;
+                    position:absolute;
+                    top: calc(50vh - 24px);
+                    right: 16px;
+                    background-color: #222222;
+                    color: #FFFFFF;
+                }
+
+            
+
+                .page_content{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: start;
+                    width: 100vw;
+                    height: fit-content;
+                    z-index: 2;
+
+                }
+
+                #hero_section{
+                    width: 100vw;
+                    height: 180vh;
+                    max-height: 1680px;
+                    min-height: 1200px;
+                    text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                    align-items: center;
+                    padding-bottom: 104px;
+                    color: #222222;
+                    /*background: linear-gradient(
+                        to right,
+                        white 0%,
+                        white 40%,
+                        #D1E3E5 40%,
+                        #D1E3E5 90%, 
+                        white 90%, 
+                        white 100%)
+                    ;*/
+                }
+
+                .image_banner{
+                    width: 60vw;
+                    height: 50vh;
+                    max-height: 480px;
+                    min-height: 360px;
+                    background-color: #222222;
+                    margin-top: 16px;
+                }
+
+                .text_banner{
+                    width: 60vw;
+                    height: 40vh;
+                    max-height: 360px;
+                    min-height: 280px;
+                    background-color: #222222;
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 64px;
+                }
+
+                .title1, .title2, .title3{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                }
+
+                .title1{
+                    align-items: center;
+                    text-align: center;
+                    gap: 24px;
+                    width: 80vw;
+                    height: fit-content;
+                }
+
+                .title1 p{
+                    padding: 0% 17.5vw;
+                }
+
+                .title2{
+                    align-items: start;
+                    text-align: left;
+                    gap: 16px;
+                    width: 35vw;
+                    height: fit-content;
+                }
+
+                .title3{
+                    align-items: start;
+                    text-align: left;
+                    gap: 16px;
+                    width: 100%;
+                    height: fit-content;
+
+                }
+
+                .tags{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-wrap: wrap;
+                    text-align: left;
+                    width: fit-content;
+                    gap: 8px;
+                    height: fit-content;
+                    color: #FFFFFF;
+                }
+
+                .tags p{
+                    display: flex;
+                    justify-content: flex-start;
+                    align-items: center;
+                    height: 24px;
+                    width: fit-content;
+                    padding: 0 16px;
+                    background-color: #222222;
+                }
+
+                
+
+                .big_card_section{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: start;
+                    gap: 80px;
+                    width: 100vw;
+                    height: fit-content;
+                    padding: 104px 10%;
+                    /*background: linear-gradient(
+                        to right,
+                        white 0%,
+                        white 20%,
+                        #D1E3E5 20%,
+                        #D1E3E5 80%, 
+                        white 80%, 
+                        white 100%)
+                    ;*/
+                }
+
+                .big_card_container{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: start;
+                    gap: 80px;
+                    width: 80vw;
+                    height: fit-content;
+                }
+
+                .big_card{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 104px;
+                    width: 100%;
+                    height: fit-content;
+                }
+
+                #big_card_image1, #big_card_image2, #big_card_image3, #big_card_image4, #big_card_image5{
+                    width: 100%;
+                    height: 80vh;
+                    max-height: 480px;
+                    background-color: #222222;
+                }
+
+                /*#big_card_image1{
+                    
+                }
+                
+                #big_card_image2{
+                    
+                }
+
+                #big_card_image3{
+                    
+                }
+
+                #big_card_image4{
+                    
+                }
+
+                #big_card_image5{
+                    
+                }
+
+                #big_card_image6{
+                    
+                }*/
+
+                .big_card_text{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
+                    width: 600px;
+                    max-width: 40%;
+                    height: fit-content;
+                    gap: 48px;
+
+                }
+
+                .big_card_description{
+                    width: 100%;
+                }
+
+
+
+                h1, h2, h4{
+                    font-family: "Righteous", 'Arial Narrow', Arial, sans-serif;
+                }
+
+                h1{
+                    font-size: 72px;
+                    font-weight: 500;
+                    line-height: 1;
+                }
+
+                h2{
+                    font-size: 48px;
+                    font-weight: 350;
+                    line-height: 1;
+                }
+
+                h4{
+                    font-size: 24px;
+                    font-weight: 350;
+                    line-height: 1.5;
+                }
+
+                p, a{
+                    font-family: "Manrope",'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 2;
+                }
+
+                footer{
+                    display: flex;
+                    flex-direction: column;
+                    height: 50vh;
+                    width: 100vw;
+                    background-color: #222222;
+                    padding: 10%;
+
+                }
+       
+
+            @media screen and (orientation:portrait) and (max-width:960px) and (min-width:600px) {
+
+                .big_card{
+                    gap: 56px;
+                }
+
+                #big_card_image1, #big_card_image2, #big_card_image3, #big_card_image4, #big_card_image5, #big_card_image6{
+                    width: 100%;
+                    height: 60vh;
+                    max-height: 600px;
+                    background-color: #222222;
+                }
+
+                footer{
+                    height: 30vhlo;
+                }
+
+            }
+
+            @media screen and (max-width:600px) {
+                
+                nav{
+                    flex-direction: column;
+                    justify-content: start;
+                    align-items: flex-start;
+                    height: fit-content;
+                    padding: 0 5%;
+                }
+
+                #logo_container{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                }
+
+                #logo_container a{
+                    font-family: "Sacramento", 'Arial Narrow', Arial, sans-serif;
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+
+                #logo_container button{
+                    display: flex;
+                    width: 24px;
+                    height: 24px;
+                    background-image: url(../code/Images/hamburger.png);
+                }
+
+                #menu_container{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: start;
+                    height: calc(100vh - 72px);
+                    gap: 64px;
+                    padding: 10% 0;
+                }
+
+                #menu_container_close{
+                    display: none;
+                }
+
+                .nav_items{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: space-between;
+                    height: fit-content;
+                    gap: 32px;
+                    padding: 0%;
+                }
+
+                .social_links{
+                    position: static;
+                    height: fit-content;
+                    gap: 16px;
+                    padding: 0%;
+                }
+
+                #hero_section{
+                    padding: 0 5% 56px 5%;
+                }
+
+
+                .title1 p{
+                    padding: 0%;
+                }
+
+                .image_banner{
+                    width: 100vw;
+                    height: 50vh;
+                    max-height: 480px;
+                    min-height: 360px;
+                    background-color: #222222;
+                    margin-top: 16px;
+                    padding: 0% 5%;
+                }
+
+                .text_banner{
+                    width: 100vw;
+                    height: 40vh;
+                    max-height: 360px;
+                    min-height: 280px;
+                    padding: 0% 5%;
+                }
+
+                .title2{
+                    width: 70vw;
+                }
+
+                .title3{
+                    align-items: start;
+                    text-align: left;
+                    gap: 16px;
+                    width: 100%;
+                    height: fit-content;
+
+                }
+                
+
+                .big_card_section{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: start;
+                    gap: 48px;
+                    width: 100vw;
+                    height: fit-content;
+                    padding: 56px 5%;
+                }
+
+                .big_card_container{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: start;
+                    gap: 56px;
+                    width: fit-content;
+                    height: fit-content;
+                }
+
+                .big_card{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: start;
+                    gap: 24px;
+                    width: 90vw;
+                    height: 85vh;
+                }
+
+                #big_card_image1, #big_card_image2, #big_card_image3, #big_card_image4, #big_card_image5, #big_card_image6{
+                    max-height: 600px;
+                }
+
+                .big_card_text{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: start;
+                    width: 100%;
+                    max-width: 540px;
+                    height: fit-content;
+                    gap: 24px;
+
+                }
+
+                .big_card_description{
+                    width: 100%;
+                }
+
+                h1{
+                    font-size: 56px;
+                    font-weight: 350;
+                }
+
+                h2{
+                    font-size: 32px;
+                    font-weight: 300;
+                }
+
+                h3{
+                    font-size: 24px;
+                    font-weight: 300;
+                }
+
+                p, a{
+                    font-size: 14px;
+                    font-weight: 300;
+                    line-height: 2;
+                }
+
+
+                footer{
+                    height: 50vh;
+                    width: 100vw;
+                    background-color: black;
+                    padding: 5%;
+                }
+
+                
+
+            }
+
+            @media screen and (max-width:400px) {
+                
+
+            }
+            
+        </style>
+            
+
+
+
+    </head>
+
+    <body>
+
+        <header>
+
+            <nav>
+                <section id="logo_container">
+                    <a>Samuel Akigbogun</a>
+                    <button></button>
+                </section>
+
+                <section id="menu_container_close">
+                
+                    <section class="nav_items">
+                        <a>My Work</a>
+                        <a>My Story</a>
+                        <button></button>
+                    </section>
+
+                    <section class="social_links">
+                        <a><p>Social 1 Link</p></a>
+                        <a><p>Social 2 Link</p></a>
+                        <a><p>Social 3 Link</p></a>
+                    </section>
+
+                </section>
+            </nav>
+
+        </header>
+
+        <section class="page_content">
+            <section id="hero_section">
+                <section class="title1">
+                    <h1>Sam, Creative Copywriter</h1>
+                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated<a>See my works<a></p>
+                </section>
+                <section class="image_banner"></section>
+                <section class="text_banner"></section>
+            </section>
+
+            <section class="big_card_section">
+                <section class="title2">
+                    <h2>My Works</h2>
+                    <p>Short description of what this section contains goes, and why you should read</p>
+                </section>
+
+                <section class="big_card_container">
+                    <section class="big_card">
+                        <section id="big_card_image1"></section>
+                        
+                        <section class="big_card_text">
+                            <section class="title3">
+                                <h4>This is where the description of the product goes</h4>
+                                <section class="tags"><p>Item 1</p> <p>Item 2</p> <p>Item 3</p></section>
+                            </section>
+
+                            <p class="big_card_description">Short description of what this section contai description of whaand why you should read</p>
+                        </section>
+                    </section>
+
+                    <section class="big_card">
+                        <section id="big_card_image2"></section>
+                        
+                        <section class="big_card_text">
+                            <section class="title3">
+                                <h4>This is where the description of the product goes</h4>
+                                <section class="tags"><p>Item 1</p> <p>Item 2</p> <p>Item 3</p></section>
+                            </section>
+
+                            <p class="big_card_description">Short description of what this section contai description of whaand why you should read</p>
+                        </section>
+                    </section>
+
+                    <section class="big_card">
+                        <section id="big_card_image3"></section>
+                        
+                        <section class="big_card_text">
+                            <section class="title3">
+                                <h4>This is where the description of the product goes</h4>
+                                <section class="tags"><p>Item 1</p> <p>Item 2</p> <p>Item 3</p></section>
+                            </section>
+
+                            <p class="big_card_description">Short description of what this section contai description of whaand why you should read</p>
+                        </section>
+                    </section>
+
+                    <section class="big_card">
+                        <section id="big_card_image4"></section>
+                        
+                        <section class="big_card_text">
+                            <section class="title3">
+                                <h4>This is where the description of the product goes</h4>
+                                <section class="tags"><p>Item 1</p> <p>Item 2</p> <p>Item 3</p></section>
+                            </section>
+
+                            <p class="big_card_description">Short description of what this section contai description of whaand why you should read</p>
+                        </section>
+                    </section>
+
+                    <section class="big_card">
+                        <section id="big_card_image5"></section>
+                        
+                        <section class="big_card_text">
+                            <section class="title3">
+                                <h4>This is where the description of the product goes</h4>
+                                <section class="tags"><p>Item 1</p> <p>Item 2</p> <p>Item 3</p></section>
+                            </section>
+
+                            <p class="big_card_description">Short description of what this section contai description of whaand why you should read</p>
+                        </section>
+                    </section>
+
+                </section>
+            </section>
+        </section>
+
+
+        <footer>
+
+        </footer>
+        
+        <script >
+    
+        </script>
+
+    </body>
+</html>
