@@ -559,12 +559,11 @@ a, p{
         align-items: left;
         gap: 48px;
         position: relative;
-        padding: calc(10vh - 7.2px) 0 0 0;
+        padding-top: calc(10vh - 7.2px);
     }
 
     .section2 .title2{
         width: 100%;
-        max-width: 680px;
     }
     
     .section2_background{
