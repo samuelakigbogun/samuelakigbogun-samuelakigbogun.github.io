@@ -54,14 +54,7 @@ nav a{
 } 
 
 #logo_container button{
-    display: none;
-    justify-content: space-between;
-    align-items: center;
-    width: 24px;
-    height: 24px;
-    background-image: url(Images/hamburger.png);
-    border: none;
-    outline: none;                    
+    display: none;            
 }
 
 .nav_items button{
@@ -110,8 +103,14 @@ nav a{
 }
 
 .social_links a, .social_links2 a, .social_links img, .social_links2 img{
+    display: flex;
     height: fit-content;
     width: fit-content;
+    gap: 16px;
+}
+
+.social_links p{
+    display: none;
 }
 
 
@@ -407,13 +406,7 @@ a, p{
     }
 
     .section2_background{
-        background: linear-gradient(
-            to top,
-            #D1E3E5 0%,
-            #D1E3E5 60%,
-            #FFFFFF00 60%,
-            #FFFFFF00 100%
-        );
+        background-color: #D1E3E5;
     }
 
     .section2 .banner1{
@@ -468,16 +461,24 @@ a, p{
 
     #logo_container button{
         display: flex;
+        justify-content: center;
+        align-items: center;
         width: 24px;
         height: 24px;
-        background-image: url(../Images/hamburger.png);
+        border: none;
+        outline: none;
+        background-image: url('Images/hamburger.png');
+    }
+
+    #logo_container #icon_nigga{
+        background-image: url('Images/close.png');
     }
 
     #menu_container{
         display: flex;
         flex-direction: column;
         justify-content: start;
-        height: calc(100vh - 72px);
+        height: 60vh;
         gap: 64px;
         padding: 10% 0;
     }
@@ -497,10 +498,17 @@ a, p{
     }
 
     .social_links{
+        justify-content: flex-start;
+        align-items: start;
         position: static;
         height: fit-content;
-        gap: 16px;
-        padding: 0%;
+        gap: 32px;
+        padding: 0;
+    }
+
+
+    .social_links p{
+        display: flex; 
     }
 
     .hero, .section1, .section2, .section3{
@@ -704,6 +712,11 @@ a, p{
 }
 
 @media screen and (max-width:430px) {
+    
+    #menu_container{
+        height: calc(100vh - 72px);
+    }
+    
     .hero, .section1, .section2, .section3{
         scroll-snap-align: start;
     }

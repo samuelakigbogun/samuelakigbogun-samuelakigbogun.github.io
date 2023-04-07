@@ -32,10 +32,10 @@
                     </section>
 
                     <section class="social_links">
-                        <a><img src="Images/mail.png" alt="email icon"></a>
-                        <a><img src="Images/behance.png" alt="behance icon"></a>
-                        <a><img src="Images/linkedin.png" alt="linkedin icon"></a>
-                        <a><img src="Images/twitter.png" alt="twitter icon"></a>
+                        <a><img src="Images/mail.png" alt="email icon"><p>Email</p></a>
+                        <a><img src="Images/behance.png" alt="behance icon"><p>Behance</p></a>
+                        <a><img src="Images/linkedin.png" alt="linkedin icon"><p>LinkedIn</p></a>
+                        <a><img src="Images/twitter.png" alt="twitter icon"><p>Twitter</p></a>
                     </section>
 
                 </section>
@@ -115,7 +115,28 @@
         </footer>
         
         <script >
-    
+            window.onclick=(el)=>{
+                console.log(el.target.id)
+            if(el.target==document.querySelector('#logo_container button')){
+                if(document.querySelector('#logo_container button').id==""){
+                        document.querySelector('#logo_container button').setAttribute('id','icon_nigga')
+                        menu_container_close.setAttribute('id','menu_container')
+                }
+                else if(document.querySelector('#logo_container button').id!=""){
+                        document.querySelector('#logo_container button').removeAttribute('id')
+                         menu_container.setAttribute('id','menu_container_close')
+                }}
+               
+               else {
+                if(document.body.innerHTML.includes('menu_container')){
+                     if(document.querySelector('#logo_container button').id!=""&&!menu_container.contains(el.target)&&(el.target.tagName!=='NAV')){
+                         document.querySelector('#logo_container button').removeAttribute('id')
+                         menu_container.setAttribute('id','menu_container_close')
+               }
+               }
+               }}
+                   
+               
         </script>
 
     </body>
