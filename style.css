@@ -12,13 +12,12 @@ body{
     overflow-x: hidden;
     background-color: #F6FAFF;
     color: #222222;
-    font-family: "Urbanist", Arial, sans-serif;
 }
 
 
 header, body{
     height: fit-content;
-    width: fit-content;
+    width: max-content;
 }
 
 nav{
@@ -87,8 +86,8 @@ nav a{
     height: fit-content;
     gap: 16px;
     padding: 16px;
-    position:absolute;
-    top: calc(50vh - 64px);
+    position:fixed;
+    bottom: 0px;
     right: 16px;
     background-color: #FDFFFF;
     color: #222222;
@@ -154,12 +153,35 @@ nav a{
     max-height: 720px;
 }
 
+#case_titles{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    padding: 104px 0 48px 10vw;
+    gap: 8px;
+    height: fit-content;
+    max-width: 50vw;
+}
+
+#works{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    gap: 80px;
+    padding-bottom: 104px;
+}
+
 .section1{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100vw;
     height: calc(100vh - 72px);
+    max-height: 900px;
     padding: 0 10%;
     gap: 80px;
     
@@ -180,6 +202,19 @@ nav a{
         #FFFFFF00 85%,
         #FFFFFF00 100%
     );
+}
+
+.section1_background img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 90%;
+    max-height: 800px;
+}
+
+.reverse{
+    flex-direction: row-reverse;
 }
 
 .section2{
@@ -208,10 +243,43 @@ nav a{
     align-items: center;
     width: 100vw;
     height: fit-content;
-    padding: 80px 0;
+    padding: 56px 0;
     position: relative;
     background-color: #222222;
     color: #FFFFFF;
+}
+
+.team_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 32px;
+}
+
+#teams{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60vw;
+    height: fit-content;
+}
+
+#teams img{
+    height: 64px;
+}
+
+#teams2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+    height: fit-content;
+}
+
+#teams2 img{
+    height: 48px;
 }
 
 footer{
@@ -224,6 +292,8 @@ footer{
     gap: 80px;
     position: relative;
     color: #222222;
+    background-color: #FDFFFF;
+    z-index: 5;
 }
 
 
@@ -238,19 +308,19 @@ footer{
 .title1{
     align-items: center;
     text-align: center;
-    width: 60vw;
+    width: 65vw;
     max-width: 1200px;
 }
 
 .title1 p{
-    width: 45vw;
-    max-width: 900px;
+    width: 40vw;
+    max-width: 800px;
 }
 
 .title2{
     align-items: flex-start;
     text-align: left;
-    width: 50vw;
+    width: 55vw;
     max-width: 800px;
 }
 
@@ -272,8 +342,16 @@ footer{
     align-items: flex-start;
     text-align: left;
     width: 30vw;
-    max-width: 600;
+    max-width: 600px;
     gap: 16px;
+}
+
+.tag_container{
+   display: flex;
+   flex-wrap: wrap;
+   width: fit-content;
+   height: fit-content;
+   gap: 8px;
 }
 
 .tags{
@@ -320,6 +398,14 @@ footer{
     mix-blend-mode: multiply;
 }
 
+h1, h2, h3, h4{
+    font-family: 'Space Grotesk', Arial, sans-serif;
+}
+
+a, p{
+    font-family: 'Urbanist', Arial, sans-serif;
+}
+
 h1{
     font-size: 64px;
     font-weight: 800;
@@ -342,8 +428,8 @@ h3{
 
 h4{
     font-size: 24px;
-    font-weight: 800;
-    line-height: 50px;
+    font-weight: 700;
+    line-height: 32px;
 }
 
 a, p{
@@ -362,6 +448,10 @@ a, p{
         padding: 0 5%;
     }
 
+    #works{
+        gap: 72px;
+    }
+
     .section1{
         padding-left: 5%;
         padding-right: 5%;
@@ -374,7 +464,7 @@ a, p{
 
     .title1{
         width: 80%;
-        max-width: 680px;
+        max-width: 720px;
     }
     
     .title1 p{
@@ -419,6 +509,11 @@ a, p{
 
     .section1, .section2{
         gap: 48px;
+    }
+
+    #case_titles{
+        padding: 80px 0 32px 5vw;
+        max-width: 55vw;
     }
 
 }
@@ -513,15 +608,20 @@ a, p{
         max-height: 840px;
     }
 
+    #works{
+        gap: 80px;
+    }
+
     .section1{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: space-between;
         align-items: start;
         width: 100vw;
         height: calc(100vh - 72px);
+        max-height: none;
         padding: calc(10vh - 7.2px) 5% 0 5%;
-        gap: 48px;
+        gap: 32px;
     }
     
     .section1_background{
@@ -541,7 +641,7 @@ a, p{
     }
 
     .section2{
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: space-between;
         align-items: left;
         gap: 48px;
@@ -562,8 +662,32 @@ a, p{
 
     .section3{
         align-items: start;
-        padding: calc(10vh - 7.2px) 0;
+        padding: calc(10vh - 7.2px) 5%;
         position: relative;
+    }
+
+    #teams{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+        height: fit-content;
+    }
+    
+    #teams img{
+        height: 48px;
+    }
+    
+    #teams2{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90vw;
+        height: fit-content;
+    }
+    
+    #teams2 img{
+        height: 40px;
     }
 
     footer{
@@ -646,6 +770,14 @@ a, p{
         background-color: #EEE7D7;
     }
 
+    #case_titles{
+        align-self: flex-start;
+        align-items: start;
+        text-align: left;
+        padding: 64px 0 32px 5vw;
+        max-width: 60vw;
+    }
+
     
 
     h1{
@@ -683,7 +815,7 @@ a, p{
 
 }
 
-@media screen and (max-width:430px) {
+@media screen and (max-width: 430px) {
     
     #menu_container{
         height: calc(100vh - 72px);
@@ -701,9 +833,13 @@ a, p{
         max-height: 840px;
     }
 
+    #works{
+        gap: 40px;
+    }
+
     .section1{
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: space-between;
         align-items: start;
         width: 100vw;
@@ -729,7 +865,7 @@ a, p{
     }
 
     .section2{
-        flex-direction: column;
+        flex-direction: column-reverse;
         justify-content: space-between;
         align-items: left;
         gap: 48px;
@@ -824,7 +960,10 @@ a, p{
         background-color: #EEE7D7;
     }
 
-    
+    #case_titles{
+        padding: 40px 0 20px 5vw;
+        max-width: 80vw;
+    }
 
     h1{
         font-size: 32px;
