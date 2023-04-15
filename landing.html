@@ -20,7 +20,7 @@
         <header>
 
             <nav>
-                <section id="logo_container">
+                <section id="logo_holder">
                     <a>Claire Igwe</a>
                     <button></button>
                 </section>
@@ -199,20 +199,20 @@
         <script >
             window.onclick=(el)=>{
                 console.log(el.target.id)
-            if(el.target==document.querySelector('#logo_container button')){
-                if(document.querySelector('#logo_container button').id==""){
-                        document.querySelector('#logo_container button').setAttribute('id','icon_nigga')
+            if(el.target==document.querySelector('#logo_holder button')){
+                if(document.querySelector('#logo_holder button').id==""){
+                        document.querySelector('#logo_holder button').setAttribute('id','icon_nigga')
                         menu_container_close.setAttribute('id','menu_container')
                 }
-                else if(document.querySelector('#logo_container button').id!=""){
-                        document.querySelector('#logo_container button').removeAttribute('id')
+                else if(document.querySelector('#logo_holder button').id!=""){
+                        document.querySelector('#logo_holder button').removeAttribute('id')
                          menu_container.setAttribute('id','menu_container_close')
                 }}
                
                else {
                 if(document.body.innerHTML.includes('menu_container')){
-                     if(document.querySelector('#logo_container button').id!=""&&!menu_container.contains(el.target)&&(el.target.tagName!=='NAV')){
-                         document.querySelector('#logo_container button').removeAttribute('id')
+                     if(document.querySelector('#logo_holder button').id!=""&&!menu_container.contains(el.target)&&(el.target.tagName!=='NAV')){
+                         document.querySelector('#logo_holder button').removeAttribute('id')
                          menu_container.setAttribute('id','menu_container_close')
                }
                }

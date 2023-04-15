@@ -35,7 +35,7 @@ nav{
 
 }
 
-#logo_container{
+#logo_holder{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,7 +43,7 @@ nav{
     height: 72px;
 }
 
-#logo_container a{
+#logo_holder a{
     font-size: 20px;
     font-weight: 500;
 }
@@ -52,7 +52,7 @@ nav a{
     display: block;
 } 
 
-#logo_container button{
+#logo_holder button{
     display: none;            
 }
 
@@ -531,18 +531,18 @@ a, p{
         padding: 0 5%;
     }
 
-    #logo_container{
+    #logo_holder{
         display: flex;
         justify-content: space-between;
         width: 100%;
     }
 
-    #logo_container a{
+    #logo_holder a{
         font-size: 20px;
         font-weight: 500;
     }
 
-    #logo_container button{
+    #logo_holder button{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -553,7 +553,7 @@ a, p{
         background-image: url('Images/hamburger.png');
     }
 
-    #logo_container #icon_nigga{
+    #logo_holder #icon_nigga{
         background-image: url('Images/close.png');
     }
 

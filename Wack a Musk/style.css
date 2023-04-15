@@ -10,8 +10,8 @@ body{
     justify-content: space-between;
     gap: 0;
     overflow-x: hidden;
-    background-color: #111111;
-    color: #FFFFFF;
+    background-color: #ffffff;
+    color: #222222;
 }
 
 
@@ -26,12 +26,12 @@ nav{
     align-items: center;
     width: 100vw;
     height: fit-content;
-    color: #ffffff;
+    color: #222222;
     padding: 0 10vw;
     position: fixed;
     z-index: 5;
     box-shadow: 0px 1px 2px 0px rgba(255, 255, 255, 0.2);
-    background-color: #111111;
+    background-color: #ffffff;
 
 }
 
@@ -56,7 +56,7 @@ nav{
     font-size: 16px;
     font-weight: 600;
     line-height: 48px;
-    color: #ffffff;
+    color: #222222;
 }
 
 nav a{
@@ -69,26 +69,26 @@ nav a{
     display: none;            
 }
 
-.nav_items button{
+.nav_holder button{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 24px;
     height: 24px;
     background-image: url(Images/day.png);
-    background-color: #FFFFFF;
+    background-color: #222222;
     border: none;
     outline: none;  
 }
 
-.menu_container, .nav_items{
+.menu1, .nav_holder{
     display: flex;
     justify-content: space-between;
     align-items: center;
 
 }
 
-.nav_items{
+.nav_holder{
     width: fit-content;
     gap: 32px;
 }
@@ -107,13 +107,13 @@ form{
 
 }
 
-#grid{
+#grid_container{
     display: grid;
     width: 100%;
     height: 100%;
 }
 
-.grid_items{
+.all_musks{
     position: relative;
     background-repeat: no-repeat;
     background-size: cover;
@@ -124,47 +124,47 @@ form{
 
 }
 
-#item1{
+#musk1{
     background-image: url(images/desktop/Cyberpunk.png);
     grid-area: 1 / 1 / 4 / 3;
     object-fit: cover;
 }
 
-#item2{
+#musk2{
     background-image: url(images/desktop/Olodumare.png);
     grid-area: 1 / 3 / 3 / 5;
     object-fit: cover;
 }
 
-#item3{
+#musk3{
     background-image: url(images/desktop/Shango.png);
     grid-area: 1 / 5 / 3 / 7;
     object-fit: cover;
 }
 
-#item4{
+#musk4{
     background-image: url(images/desktop/Cosmic\ Gazer.png);
     grid-area: 4 / 1 / 6 / 3;
     object-fit: cover;
 }
 
-#item5{
+#musk5{
     background-image: url(images/desktop/Agbani\ Darego.png);
     grid-area: 3 / 3 / 6 / 5;
     object-fit: cover;
 }
 
-#item6{
+#musk6{
     background-image: url(images/desktop/Yemoja.png);
     grid-area: 3 / 5 / 6 / 7;
     object-fit: cover;
 }
 
-.item_count{
+.small_counter{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: #FFFFFF90;
+    background-color: #22222290;
     position: absolute;
     right: 16px;
     bottom: 16px;
@@ -180,19 +180,19 @@ form{
     max-width: 400px;
 }
 
-#main_output{
+#display_holder{
     display: flex;
     flex-direction: column;
     gap: 40px;
 }
 
-#title, #display{
+#description, #display{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
 }
 
-#title{
+#description{
     gap: 8px;
 }
 
@@ -218,12 +218,12 @@ button{
     height: fit-content;
     gap: 8px;
     background: none;
-    color: #FFFFFF;
+    color: #222222;
 }
 
 /*Form Styling Ends*/
 
-a, p, .item_count, label, button, #title p{
+a, p, .small_counter, label, button, #description p{
     font-family: 'Urbanist', Arial, sans-serif;
     font-size: 16px;
     font-weight: 400;
@@ -307,7 +307,7 @@ form{
         font-size: 14px;
         font-weight: 400;
         line-height: 48px;
-        color: #ffffff;
+        color: #222222;
     }
 
     #logo_holder button{
@@ -321,11 +321,11 @@ form{
         background-image: url('Images/hamburger.png');
     }
 
-    #logo_holder #icon_nigga{
+    #logo_holder #icon2{
         background-image: url('Images/close.png');
     }
 
-    #menu_container{
+    #menu1{
         display: flex;
         flex-direction: column;
         justify-content: start;
@@ -334,11 +334,11 @@ form{
         padding: 10% 0;
     }
 
-    #menu_container_close{
+    #menu2{
         display: none;
     }
 
-    .nav_items{
+    .nav_holder{
         display: flex;
         flex-direction: column;
         align-items: flex-start;
@@ -363,11 +363,11 @@ form{
 }
 
 
-.item_count{
+.small_counter{
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    background-color: #FFFFFF90;
+    background-color: #22222290;
     position: absolute;
     right: 16px;
     bottom: 16px;
@@ -385,7 +385,7 @@ form{
     max-width: none;
 }
 
-#main_output{
+#display_holder{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -393,14 +393,14 @@ form{
     width: 90vw;
 }
 
-#title, #display{
+#description, #display{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     max-width: 320px;
 }
 
-#title{
+#description{
     gap: 16px;
 }
 
@@ -426,12 +426,12 @@ button{
     height: fit-content;
     gap: 8px;
     background: none;
-    color: #FFFFFF;
+    color: #222222;
 }
 
 /*Form Styling Ends*/
 
-a, p, .item_count, label, button, #title p{
+a, p, .small_counter, label, button, #description p{
     font-family: 'Urbanist', Arial, sans-serif;
     font-size: 14px;
     font-weight: 400;
@@ -462,7 +462,7 @@ footer{
     font-size: 8px;
     font-weight: 200;
     line-height: 16px;
-    box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.2);
 }
 
 }
@@ -471,19 +471,19 @@ footer{
 
 @media screen and (max-width: 430px) {
     
-    #menu_container{
+    #menu1{
         height: calc(100vh - 72px);
     }
 
     
-    #title, #display{
+    #description, #display{
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         max-width: none;
     }
 
-    a, p, .item_count, label, button, #title p{
+    a, p, .small_counter, label, button, #description p{
         font-family: 'Urbanist', Arial, sans-serif;
         font-size: 12px;
         font-weight: 400;

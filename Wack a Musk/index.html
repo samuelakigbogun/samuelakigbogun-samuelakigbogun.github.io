@@ -3,8 +3,8 @@
     <head>
         <meta charset="UTF-8">
         <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0' />
-        <title>Hearts by Em</title>
-        <link rel="icon" href="images/love.png" type="image/x-icon">
+        <title>Wack a Musk</title>
+        <link rel="icon" href="images/hammer.png" type="image/x-icon">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Sacramento&family=Space+Grotesk:wght@300;400;500;600;700&family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
@@ -25,11 +25,10 @@
                     <button></button>
                 </section>
 
-                <section id="menu_container_close">
+                <section id="menu2">
                 
-                    <section class="nav_items">
-                        <a><p>Read Me</p><img src="images/Help.png" alt="Read Me Document icon"></a>
-                        <a><p>Github Repo</p><img src="images/Github.png" alt="Github icon"></a>
+                    <section class="nav_holder">
+                        <a><p>View Source</p><img src="images/Github.png" alt="Github icon"></a>
                     </section>
 
                 </section>
@@ -39,28 +38,30 @@
 
         <form>
 
-            <section id="grid">
+            <section id="grid_container">
 
-                <button id="item1" class="grid_items"><output class="item_count">0<img src="images/love.png" alt="love icon"></output></button>
-                <button id="item2" class="grid_items"><output class="item_count">0<img src="images/love.png" alt="love icon"></output></button>
-                <button id="item3" class="grid_items"><output class="item_count">0<img src="images/love.png" alt="love icon"></output></button>
-                <button id="item4" class="grid_items"><output class="item_count">0<img src="images/love.png" alt="love icon"></output></button>
-                <button id="item5" class="grid_items"><output class="item_count">0<img src="images/love.png" alt="love icon"></output></button>
-                <button id="item6" class="grid_items"><output class="item_count">0<img src="images/love.png" alt="love icon"></output></button>
+                <button id="musk1" class="all_musks"><output class="small_counter">0<img src="images/hammer.png" alt="Thor's Hammer"></output></button>
+                <button id="musk2" class="all_musks"><output class="small_counter">0<img src="images/hammer.png" alt="Thor's Hammer"></output></button>
+                <button id="musk3" class="all_musks"><output class="small_counter">0<img src="images/hammer.png" alt="Thor's Hammer"></output></button>
+                <button id="musk4" class="all_musks"><output class="small_counter">0<img src="images/hammer.png" alt="Thor's Hammer"></output></button>
+                <button id="musk5" class="all_musks"><output class="small_counter">0<img src="images/hammer.png" alt="Thor's Hammer"></output></button>
+                <button id="musk6" class="all_musks"><output class="small_counter">0<img src="images/hammer.png" alt="Thor's Hammer"></output></button>
+                <button id="musk7" class="all_musks"><output class="small_counter">0<img src="images/hammer.png" alt="Thor's Hammer"></output></button>
+                <button id="musk8" class="all_musks"><output class="small_counter">0<img src="images/hammer.png" alt="Thor's Hammer"></output></button>
 
             </section>
 
             <section id="text">
 
-                <section id="main_output">
-                    <section id="title">    
+                <section id="display_holder">
+                    <section id="description">    
                         <h1>Vote your<br>AI-Generated Art</h1>
                         <p>Click on your favorite AI-generated art as many times as you like</p>
                     </section>
     
                     <section id="display">
                         <output>0</output>
-                        <label>Clicks in Total</label>
+                        <p>Clicks in Total</p>
                     </section>
                 </section>
 
@@ -82,19 +83,19 @@
                 console.log(el.target.id)
             if(el.target==document.querySelector('#logo_holder button')){
                 if(document.querySelector('#logo_holder button').id==""){
-                        document.querySelector('#logo_holder button').setAttribute('id','icon_nigga')
-                        menu_container_close.setAttribute('id','menu_container')
+                        document.querySelector('#logo_holder button').setAttribute('id','icon2')
+                        menu2.setAttribute('id','menu1')
                 }
                 else if(document.querySelector('#logo_holder button').id!=""){
                         document.querySelector('#logo_holder button').removeAttribute('id')
-                         menu_container.setAttribute('id','menu_container_close')
+                         menu1.setAttribute('id','menu2')
                 }}
                
                else {
-                if(document.body.innerHTML.includes('menu_container')){
-                     if(document.querySelector('#logo_holder button').id!=""&&!menu_container.contains(el.target)&&(el.target.tagName!=='NAV')){
+                if(document.body.innerHTML.includes('menu1')){
+                     if(document.querySelector('#logo_holder button').id!=""&&!menu1.contains(el.target)&&(el.target.tagName!=='NAV')){
                          document.querySelector('#logo_holder button').removeAttribute('id')
-                         menu_container.setAttribute('id','menu_container_close')
+                         menu1.setAttribute('id','menu2')
                }
                }
                }}
